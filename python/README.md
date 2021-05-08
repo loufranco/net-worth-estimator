@@ -15,7 +15,13 @@ pyenv install 3.9.4
 Here's what I did to install matplotlib
 
 ```bash
-python -m pip install cython
-python -m pip install --no-cache-dir --no-binary :all: --no-use-pep517 numpy
+python -m pip install -U cython
+python -m pip install -U numpy
 python -m pip install -U matplotlib
+```
+
+There's a requirements.txt if you want to use that:
+
+```base
+python -m pip install -r requirements.txt
 ```
