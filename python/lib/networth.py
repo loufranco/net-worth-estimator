@@ -1,14 +1,11 @@
-import matplotlib
-import matplotlib.pyplot as plt
-
 def netWorthByAge(
     ages, 
-    savingsRate = 0.15, 
+    savingsRate = 0.18, 
     startingNetWorth = 10000,
     startingSalary = 40000,
     raises = 0.025,
     
-    marketReturn = 0.06,
+    marketReturn = (lambda age: 0.06),
     inflation = 0.02,
     
     retirementAge = 65
@@ -24,7 +21,7 @@ def netWorthByAge(
     if age == startingAge:
       netWorth = startingNetWorth
     else:
-      netWorth = netWorth * (1 + marketReturn) + savings
+      netWorth = netWorth * (1 + marketReturn(age - 1)) + savings
 
     if age >= retirementAge:
       savings = -startingSalary * pow(1+inflation, age - startingAge) * (1 - savingsRate) * 0.9
@@ -34,10 +31,3 @@ def netWorthByAge(
     netWorthList.append(netWorth)
 
   return netWorthList
-
-ages = range(25, 86)
-scenarioA = netWorthByAge(ages = ages, savingsRate = 0.18)
-scenarioB = netWorthByAge(ages = ages, savingsRate = 0.12)
-
-plt.plot(ages, scenarioA, ages, scenarioB)
-plt.savefig('net-worth.png')
