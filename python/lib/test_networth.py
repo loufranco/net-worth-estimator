@@ -11,3 +11,6 @@ class TestNetWorth(unittest.TestCase):
 
     def test_net_worth_with_savings(self):
         self.assertEqual(netWorthByAge([25, 26], 0.1, 10000, 40000, 0), [10000, 14600])
+
+    def test_net_worth_three_ages_with_savings(self):
+        self.assertEqual(netWorthByAge([25, 26, 27], 0.1, 10000, 40000, 0), [10000, 14600, 19476])
