@@ -31,7 +31,7 @@ The data in mkt-data.tsv is from: [http://pages.stern.nyu.edu/~adamodar/New_Home
 **nw-market.py**: A command-line utility that will show a savings scenario against historical market data from 1928, 1933, 1938 ... 1958 so you can see a range of real outcomes.
 
 ```
-$ python nw-market.py 
+$ python nw-market.py
 Usage: python nw-market.py <chart output file> <ending age> <savings rate>
 Example: python nw-market.py market.png 65 0.18
 
@@ -45,7 +45,7 @@ $ open market.png
 using two savings rates and a flat 6% market return.
 
 ```
-$ python nw-savings.py 
+$ python nw-savings.py
 Usage: python nw-savings.py <chart output file> <savings rate 1> <savings rate 2>
 Example: python nw-savings.py savings.png 0.18 0.12
 
@@ -54,3 +54,7 @@ $ open savings.png
 ```
 
 ![The output graph from nw-savings.py](./sample-output/savings.png)
+
+## Contributers
+
+- [Lou Franco](https://github.com/loufranco)
