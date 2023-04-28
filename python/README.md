@@ -54,3 +54,6 @@ $ open savings.png
 ```
 
 ![The output graph from nw-savings.py](./sample-output/savings.png)
+
+## Contributors
+[Koji Aquilino](https://github.com/Kocci4/)
